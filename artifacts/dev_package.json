@@ -1,0 +1,55 @@
+{
+	"id": "C64E9B28-FF0B-ED11-B47A-000D3AB2359F",
+	"createdAt": "2022-07-25T09:50:05.430Z",
+	"createdBy": "kristin.eliassen@neptune-software.com",
+	"git": {
+		"targetServers": [],
+		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-googlevisionocr",
+		"testServers": []
+	},
+	"name": "neptunesoftware-dxp-abb-googlevisionocr",
+	"description": null,
+	"ver": "22.7.25.951",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "92B181BC-F055-454E-8909-523E7366A584",
+			"ver": "22.7.25.1150",
+			"application": "ocr_google_vision2",
+			"title": "UTIL",
+			"description": "OCR - Google Vision"
+		}
+	],
+	"api": [
+		{
+			"id": "33C7EB19-AAE8-4869-9451-4301DF570587",
+			"name": "GoogleVision",
+			"ver": "22.7.25.950",
+			"description": null,
+			"apiGroup": null
+		}
+	],
+	"odataMock": [],
+	"odataSource": [],
+	"dictionary": [],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"wf_definition": [],
+	"department": [],
+	"script_scheduler": [],
+	"connector": []
+}

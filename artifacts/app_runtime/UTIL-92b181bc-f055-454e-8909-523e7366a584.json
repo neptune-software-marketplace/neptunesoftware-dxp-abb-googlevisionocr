@@ -1,0 +1,643 @@
+{
+	"id": "92b181bc-f055-454e-8909-523e7366a584",
+	"createdAt": "2022-02-04T15:47:11.613Z",
+	"updatedAt": "2022-07-25T09:50:46.033Z",
+	"createdBy": "luuk.wosten@neptune-software.com",
+	"changedBy": "kristin.eliassen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "520dbae1-6ea7-4431-efe5-1a2beae0e698",
+					"fieldName": "OCRDialog",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "fdefe796-6166-4cdb-ffd3-8e66e959c06b",
+							"fieldName": "btnCapture",
+							"fieldParent": "520dbae1-6ea7-4431-efe5-1a2beae0e698",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "type",
+									"grouping": "Properties",
+									"value": "Emphasized",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "icon",
+									"grouping": "Properties",
+									"value": "sap-icon://fa-solid/camera",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "capturePhoto();",
+									"script": "capturePhoto();",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "6b0ed17b-0c44-4cb9-943c-9ba971b9c84a",
+							"fieldName": "btnCancel",
+							"fieldParent": "520dbae1-6ea7-4431-efe5-1a2beae0e698",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "type",
+									"grouping": "Properties",
+									"value": "Reject",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "icon",
+									"grouping": "Properties",
+									"value": "sap-icon://fa-regular/window-close",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"imgCamera.setVisible(false);",
+										"imgCamera.setSrc();",
+										"txtOCR.setValue();",
+										"tabsData.setSelectedKey('image');",
+										"diaImageCapture.close();",
+										""
+									],
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "5d4683b5-7c1e-4bd7-9f49-258382030dab",
+							"fieldName": "diaImageCapture",
+							"fieldParent": "520dbae1-6ea7-4431-efe5-1a2beae0e698",
+							"fieldType": "sap.m.Dialog",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Image",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentWidth",
+									"grouping": "Properties",
+									"value": "500px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "contentHeight",
+									"grouping": "Properties",
+									"value": "600px",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "endButton",
+									"grouping": "Associations",
+									"value": "btnCancel",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "beginButton",
+									"grouping": "Associations",
+									"value": "btnCapture",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "900165ff-7798-47d6-9628-78fb5da4f905",
+									"fieldName": "tabsData",
+									"fieldParent": "5d4683b5-7c1e-4bd7-9f49-258382030dab",
+									"fieldType": "sap.m.IconTabBar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": [
+										{
+											"fieldNo": "dc24dbc9-2fc3-4619-e6d1-d137db2762ae",
+											"fieldName": "tabImage",
+											"fieldParent": "900165ff-7798-47d6-9628-78fb5da4f905",
+											"fieldType": "sap.m.IconTabFilter",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "key",
+													"grouping": "Properties",
+													"value": "image",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://fa-solid/image",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "ad5cf5d4-409e-4147-e295-7df528f64826",
+													"fieldName": "panelImg",
+													"fieldParent": "dc24dbc9-2fc3-4619-e6d1-d137db2762ae",
+													"fieldType": "sap.m.Panel",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "headerText",
+															"grouping": "Properties",
+															"value": "Image",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "fc3dce8d-b7d2-43c6-aa8c-b68049193319",
+															"fieldName": "imgCamera",
+															"fieldParent": "ad5cf5d4-409e-4147-e295-7df528f64826",
+															"fieldType": "sap.m.Image",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "width",
+																	"grouping": "Properties",
+																	"value": "20em",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "visible",
+																	"grouping": "Properties",
+																	"value": "false",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "mode",
+																	"grouping": "Properties",
+																	"value": "Background",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "height",
+																	"grouping": "Properties",
+																	"value": "20em",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "densityAware",
+																	"grouping": "Properties",
+																	"value": "false",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "backgroundSize",
+																	"grouping": "Properties",
+																	"value": "contain",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "backgroundRepeat",
+																	"grouping": "Properties",
+																	"value": "no-repeat",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "backgroundPosition",
+																	"grouping": "Properties",
+																	"value": "center center",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										},
+										{
+											"fieldNo": "d965c530-b07b-4f15-d6c9-60d9309486ca",
+											"fieldName": "tabOCRText",
+											"fieldParent": "900165ff-7798-47d6-9628-78fb5da4f905",
+											"fieldType": "sap.m.IconTabFilter",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "key",
+													"grouping": "Properties",
+													"value": "text",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "icon",
+													"grouping": "Properties",
+													"value": "sap-icon://text-formatting",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "a1c0a629-a07f-43a1-c01d-b143da9f0c69",
+													"fieldName": "panelText",
+													"fieldParent": "d965c530-b07b-4f15-d6c9-60d9309486ca",
+													"fieldType": "sap.m.Panel",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "headerText",
+															"grouping": "Properties",
+															"value": "Text",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": [
+														{
+															"fieldNo": "63cb4883-4b5c-4bb0-f3e0-8ac246af0fc0",
+															"fieldName": "txtOCR",
+															"fieldParent": "a1c0a629-a07f-43a1-c01d-b143da9f0c69",
+															"fieldType": "sap.m.TextArea",
+															"script": "",
+															"request": [],
+															"response": [],
+															"attributes": [
+																{
+																	"attribute": "width",
+																	"grouping": "Properties",
+																	"value": "100%",
+																	"script": "",
+																	"translation": []
+																},
+																{
+																	"attribute": "height",
+																	"grouping": "Properties",
+																	"value": "350px",
+																	"script": "",
+																	"translation": []
+																}
+															],
+															"data": []
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"fieldNo": "fbb1f8a9-5697-4c26-cb26-3906ca15d2d4",
+					"fieldName": "APIs",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "f462a847-c522-422e-ae80-a6482b847bf7",
+							"fieldName": "GoogleVisionResponse",
+							"fieldParent": "fbb1f8a9-5697-4c26-cb26-3906ca15d2d4",
+							"fieldType": "neptune.model",
+							"script": "",
+							"bindingValue": "GoogleVision>response",
+							"bindingType": "h",
+							"bindingSource": "API",
+							"bindingParentID": "33c7eb19-aae8-4869-9451-4301df570587",
+							"bindingPathID": "99b559b2-0d62-422b-ac7e-6d9d9aca369c",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "78d395f2-aad5-4c7a-a78e-e8e8f4fd653f",
+							"fieldName": "GoogleVision",
+							"fieldParent": "fbb1f8a9-5697-4c26-cb26-3906ca15d2d4",
+							"fieldType": "neptune.restapi",
+							"script": "",
+							"restSource": "33C7EB19-AAE8-4869-9451-4301DF570587",
+							"restOperation": "398568B7-8D4A-47D3-E56A-508B9FB542F2",
+							"request": [],
+							"response": [
+								{
+									"status": "200",
+									"dataId": "99b559b2-0d62-422b-ac7e-6d9d9aca369c",
+									"modelFieldNo": "f462a847-c522-422e-ae80-a6482b847bf7"
+								}
+							],
+							"attributes": [
+								{
+									"attribute": "ajaxSuccess",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"oApp.setBusy(false);",
+										"var text = modelGoogleVisionResponse.oData.responses[0].textAnnotations[0].description;",
+										"txtOCR.setValue(text);",
+										"",
+										"tabsData.setSelectedKey('text');"
+									],
+									"translation": []
+								},
+								{
+									"attribute": "ajaxError",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"sap.m.MessageToast.show(\"Error in OCR API\");",
+										"",
+										"oApp.setBusy(false);"
+									],
+									"translation": []
+								}
+							],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "e4b0fcaa-4832-4a09-a109-94b04132d0dd",
+					"fieldName": "Functions",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "80d50984-87da-49de-ce6c-ac6ea241db7f",
+							"fieldName": "Camera",
+							"fieldParent": "e4b0fcaa-4832-4a09-a109-94b04132d0dd",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"// var pictureSource;    picture source",
+								"// var destinationType;  sets the format of returned value",
+								"",
+								"// Wait for device API libraries to load",
+								"",
+								"document.addEventListener(\"deviceready\", onDeviceReady, false);",
+								"",
+								"// device APIs are available",
+								"//",
+								"function onDeviceReady() {",
+								"    pictureSource = navigator.camera.PictureSourceType;",
+								"    destinationType = navigator.camera.DestinationType;",
+								"}",
+								"",
+								"// Called when a photo is successfully retrieved",
+								"function onPhotoDataSuccess(imageData) {",
+								"    imgCamera.setVisible(true);",
+								"    imgCamera.setSrc(\"data:image/jpeg;base64,\" + imageData);",
+								"",
+								"    OCRTransform(imageData);",
+								"",
+								"}",
+								"",
+								"// Called when a photo is successfully retrieved",
+								"function onPhotoURISuccess(imageURI) {",
+								"    imgCamera.setVisible(true);",
+								"    imgCamera.setSrc(imageURI);",
+								"}",
+								"",
+								"// A button will call this function",
+								"function capturePhoto() {",
+								"    //  Take picture using device camera and retrieve image as base64-encoded string",
+								"    navigator.camera.getPicture(onPhotoDataSuccess, onFail, {",
+								"        quality: 50,",
+								"        correctOrientation: true,",
+								"        destinationType: destinationType.DATA_URL,",
+								"        cameraDirection:\"BACK\"",
+								"    });",
+								"}",
+								"",
+								"// A button will call this function",
+								"function capturePhotoEdit() {",
+								"    //  Take picture using device camera, allow edit, and retrieve image as base64-encoded string",
+								"    navigator.camera.getPicture(onPhotoDataSuccess, onFail, {",
+								"        quality: 20,",
+								"        allowEdit: true,",
+								"        destinationType: destinationType.DATA_URL,",
+								"        cameraDirection:\"BACK\"",
+								"    });",
+								"}",
+								"",
+								"// A button will call this function",
+								"function getPhoto(source) {",
+								"    //  Retrieve image file location from specified source",
+								"    navigator.camera.getPicture(onPhotoURISuccess, onFail, {",
+								"        quality: 50,",
+								"        destinationType: destinationType.FILE_URI,",
+								"        sourceType: source,",
+								"        cameraDirection:\"BACK\"",
+								"    });",
+								"}",
+								"",
+								"// Called if something bad happens.",
+								"function onFail(message) {",
+								"    alert('Failed because: ' + message);",
+								"}"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "e00e688d-c32c-4e5e-dd50-a079b58654e1",
+							"fieldName": "OCRFunction",
+							"fieldParent": "e4b0fcaa-4832-4a09-a109-94b04132d0dd",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"function OCRTransform(ImageData) {",
+								"",
+								"    oApp.setBusy(true);",
+								"",
+								"",
+								"",
+								"    var options = {",
+								"        parameters: {",
+								"            \"key\": \"\" // Your API Key Here",
+								"        },",
+								"        data: {",
+								"            \"requests\": [{",
+								"                \"features\": [{",
+								"                        \"maxResults\": 50,",
+								"                        \"type\": \"LANDMARK_DETECTION\"",
+								"                    },",
+								"                    {",
+								"                        \"maxResults\": 50,",
+								"                        \"type\": \"FACE_DETECTION\"",
+								"                    },",
+								"                    {",
+								"                        \"maxResults\": 50,",
+								"                        \"type\": \"OBJECT_LOCALIZATION\"",
+								"                    },",
+								"                    {",
+								"                        \"maxResults\": 50,",
+								"                        \"type\": \"LOGO_DETECTION\"",
+								"                    },",
+								"                    {",
+								"                        \"maxResults\": 50,",
+								"                        \"type\": \"LABEL_DETECTION\"",
+								"                    },",
+								"                    {",
+								"                        \"maxResults\": 50,",
+								"                        \"type\": \"DOCUMENT_TEXT_DETECTION\"",
+								"                    },",
+								"                    {",
+								"                        \"maxResults\": 50,",
+								"                        \"type\": \"SAFE_SEARCH_DETECTION\"",
+								"                    },",
+								"                    {",
+								"                        \"maxResults\": 50,",
+								"                        \"type\": \"IMAGE_PROPERTIES\"",
+								"                    },",
+								"                    {",
+								"                        \"maxResults\": 50,",
+								"                        \"type\": \"CROP_HINTS\"",
+								"                    },",
+								"                    {",
+								"                        \"maxResults\": 50,",
+								"                        \"type\": \"WEB_DETECTION\"",
+								"                    }",
+								"                ],",
+								"                \"image\": {",
+								"                    \"content\": ImageData",
+								"                },",
+								"                \"imageContext\": {",
+								"                    \"cropHintsParams\": {",
+								"                        \"aspectRatios\": [",
+								"                            0.8,",
+								"                            1,",
+								"                            1.2",
+								"                        ]",
+								"                    }",
+								"                }",
+								"            }]",
+								"        }",
+								"    };",
+								"",
+								"    apiGoogleVision(options);",
+								"",
+								"}"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "22.7.25.1150",
+	"application": "ocr_google_vision2",
+	"title": "UTIL",
+	"description": "OCR - Google Vision",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": false,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "C",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_belize",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": "",
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": false,
+	"apis": [
+		{
+			"id": "33C7EB19-AAE8-4869-9451-4301DF570587",
+			"name": "GoogleVision",
+			"ver": "22.7.25.950",
+			"updatedAt": "2022-07-25T09:50:46.013Z",
+			"changedBy": "kristin.eliassen@neptune-software.com"
+		}
+	]
+}
